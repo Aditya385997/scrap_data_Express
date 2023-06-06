@@ -25,7 +25,7 @@ let json_data;
 
 app.get("/",async(req,res)=>{
   console.log('hi')
-   json_data = await truecallerjs.login("+917045284960"); 
+   json_data = await truecallerjs.login("+91[phonenumber]"); 
    console.log(json_data)
 
 })
@@ -33,7 +33,7 @@ app.get("/:sendOtp",async(req,res)=>{
   console.log("hii otpkdscsdnc")
   const otp = req.params.sendOtp;
   
-  const data = await truecallerjs.verifyOtp("+917045284960", json_data, otp);
+  const data = await truecallerjs.verifyOtp("+91[phonenumber]", json_data, otp);
 
   console.log(data);
 })
